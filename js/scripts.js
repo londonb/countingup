@@ -1,14 +1,14 @@
-var counter = function(number) {
-  number = (number * 2)
-  return number;
-}
-
-var range = function(countTo, countBy) {
-  var countTo;
-  var countBy;
-  var result = parseInt(countTo / countBy)
-  return result;
-}
+// var counter = function(number) {
+//   number = (number * 2)
+//   return number;
+// }
+//
+// var range = function(#countTo, #countBy) {
+//   var countTo;
+//   var countBy;
+//   var result = parseInt(countTo / countBy)
+//   return result;
+// }
 
 var output = function(countTo, countBy) {
 
@@ -33,11 +33,22 @@ var output = function(countTo, countBy) {
 
   // return numberArray;
   countArray = countArray.toString();
-console.log(countArray);
-  return countArray.toString();
-
+  return countArray;
 }
+
+
 
 $(document).ready(function(){
 
-})
+  $("form#counting").submit(function(event) {
+     var countTo = $("input#countTo").val();
+     var countBy = $("input#countBy").val();
+
+    var toPrint = output(countTo,countBy);
+
+    $("#printTo").append(toPrint)
+console.log(output);
+
+event.preventDefault();
+  });
+});

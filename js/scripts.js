@@ -10,26 +10,31 @@ var range = function(countTo, countBy) {
   return result;
 }
 
-var result = function(a,b) {
+var output = function(countTo, countBy) {
 
   var numberArray = [];
   var countArray = [];
-  var range = function(countTo, countBy) {
-    var countTo;
-    var countBy;
-    var result = parseInt(countTo / countBy)
-    return result;
+  var countTo;
+  var countBy;
+  var result = parseInt(countTo / countBy)
+
+
+  for(var index1 = 1; index1 < (result + 1); index1 += 1) {
+    numberArray.push(index1);
+    console.log(numberArray);
+
   }
 
+  for(var index2 = 1; index2 < (numberArray.length)+1; index2 ++) {
+    var product = index2 * countBy
+    countArray.push(product);
 
-  for(var i = 1; i < range; i++) {
-    if ()
-
-    var output = ();
-    return output;
   }
 
-
+  // return numberArray;
+  countArray = countArray.toString();
+console.log(countArray);
+  return countArray.toString();
 
 }
 
